@@ -2,7 +2,7 @@
 local library = { 
 	flags = { }, 
 	items = { } 
-}c
+}
 
 -- Services
 local players = game:GetService("Players")
