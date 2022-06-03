@@ -3408,10 +3408,10 @@ function library:CreateWindow(name, size, hidebutton)
             return sector
         end
 
-        function tab:CreateConfigSystem(side)
+        function tab:CreateConfigSystem(side, cfg)
             local configSystem = { }
 
-            configSystem.configFolder = "CheapWare"
+            configSystem.configFolder = cfg
             if (not isfolder(configSystem.configFolder)) then
                 makefolder(configSystem.configFolder)
             end
@@ -3539,7 +3539,7 @@ function library:CreateWindow(name, size, hidebutton)
 	
 
     
-        function tab:CreatePlayerlist(name)
+       --[[ function tab:CreatePlayerlist(name)
             local list = { }
             list.name = name or ""
 
@@ -3654,7 +3654,7 @@ function library:CreateWindow(name, size, hidebutton)
             end)
             
             return list
-        end
+        end]]--
 
 
         table.insert(window.Tabs, tab)
