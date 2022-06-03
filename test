@@ -3408,14 +3408,17 @@ function library:CreateWindow(name, size, hidebutton)
             return sector
         end
 
-        function tab:CreateConfigSystem(side, cfg)
+        function tab:CreateConfigSystem(side, cfg, gamecfgf)
             local configSystem = { }
 
             configSystem.configFolder = cfg
             if (not isfolder(configSystem.configFolder)) then
                 makefolder(configSystem.configFolder)
             end
-
+            configSystem.GameconfigFolder = gamecfgf
+            if (not isfolder(configSystem.GameconfigFolder)) then
+                makefolder(configSystem.GameconfigFolder)
+            end
             configSystem.sector = tab:CreateSector("Loadout Config", side or "left")
 
             local ConfigName = configSystem.sector:AddTextbox("Config Name", "", ConfigName, function() end, "")
