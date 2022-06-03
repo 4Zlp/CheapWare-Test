@@ -3416,8 +3416,8 @@ function library:CreateWindow(name, size, hidebutton)
                 makefolder(configSystem.configFolder)
             end
             configSystem.GameconfigFolder = gamecfgf
-            if (not isfolder(configSystem.GameconfigFolder)) then
-                makefolder(configSystem.GameconfigFolder)
+            if (not isfolder(configSystem.configFolder/configSystem.GameconfigFolder)) then
+                makefolder(configSystem.configFolder/configSystem.GameconfigFolder)
             end
             configSystem.sector = tab:CreateSector("Loadout Config", side or "left")
 
